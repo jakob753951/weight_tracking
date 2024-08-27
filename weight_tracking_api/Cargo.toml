@@ -1,0 +1,14 @@
+[package]
+name = "weight_tracking_api"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+color-eyre = "0.6"
+serde = { version = "1.0", features = ["derive"] }
+tokio = { version = "1.39", features = ["full"] }
+chrono = { version = "0.4", features = ["serde"] }
+poem = "3"
+poem-openapi = { version = "5.0", features = ["swagger-ui", "chrono"] }
+sqlx = { version = "0.8", features = ["postgres", "runtime-tokio", "tls-native-tls", "macros", "chrono"] }
+#openssl = { version = "0.10", features = ["vendored"] }
